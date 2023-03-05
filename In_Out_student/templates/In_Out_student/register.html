@@ -1,0 +1,30 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'In_Out_student/register.css' %}">
+
+
+
+<form action="{% url 'polls:vote' question.id %}" method="post">
+{% csrf_token %}
+    <!-- Main container for all inputs -->
+    <div >
+        
+        <label for="id">id</label>
+        <input type="number"  name="id" required>
+<br><br>
+        <label for="pswrd">pswrd</label>
+        <input type="password"  name="pswrd" required>
+<br><br>
+        <label for="name">name</label>
+        <input type="text"  name="name" required>
+<br><br>
+        <label for="aadhar_num">aadhar_num</label>
+        <input type="number"  name="aadhar_num" required>
+<br><br>
+        <label for="mobile_num">mobile_num</label>
+        <input type="number"  name="mobile_num" required>
+<br><br>
+        <button type="submit">signin</button>
+
+    </div>
+
+</form>
